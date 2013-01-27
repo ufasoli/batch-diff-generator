@@ -65,6 +65,7 @@ public class DiffGenerator {
             for(DiffRow dr : rows){
 
 
+
                 htmlBody.append("<tr>");
                 String css = "gray";
 
