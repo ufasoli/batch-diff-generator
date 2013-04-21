@@ -1,17 +1,9 @@
 package com.ufasoli.diffgenerator;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -22,19 +14,11 @@ import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.PosixParser;
 
 import com.ufasoli.diffgenerator.diff.implementations.UrlDiffCompare;
-import com.ufasoli.diffgenerator.util.FileUtils;
-
-import difflib.Chunk;
-import difflib.Delta;
-import difflib.Delta.TYPE;
-import difflib.DiffUtils;
-import difflib.Patch;
 
 /**
  * Class Name   : DiffCompare
  * Description  :
  * Date         : 17 janv. 2013
- * Copyright    : ARTE G.E.I.E.    
  * Auteur       : Ulises Fasoli
  */
 public class DiffCompare {
