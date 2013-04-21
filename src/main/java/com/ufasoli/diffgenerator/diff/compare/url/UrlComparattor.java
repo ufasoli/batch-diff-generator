@@ -1,31 +1,17 @@
-package com.ufasoli.diffgenerator.diff.implementations;
+package com.ufasoli.diffgenerator.diff.compare.url;
 
-import difflib.Chunk;
-import difflib.Delta;
-import difflib.Delta.TYPE;
-import difflib.DiffRow;
-import difflib.DiffRow.Tag;
-import difflib.DiffRowGenerator;
-import difflib.DiffRowGenerator.Builder;
-import difflib.DiffUtils;
-import difflib.Patch;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import difflib.*;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.ObjectWriter;
 
-public class UrlDiffCompare
+public class UrlComparattor implements Comparator
 {
     private String url1;
     private String url2;
@@ -34,7 +20,7 @@ public class UrlDiffCompare
     private List<String> url1Lines;
     private List<String> url2Lines;
 
-    public UrlDiffCompare(String url1, String url2, String reportName, String outputFolder)
+    public UrlComparattor(String url1, String url2, String reportName, String outputFolder)
     {
         this.url1 = url1;
         this.url2 = url2;
@@ -51,7 +37,7 @@ public class UrlDiffCompare
         builder.columnWidth(120);
         DiffRowGenerator drg = builder.build();
 
-        List rows = drg.generateDiffRows(this.url1Lines, this.url2Lines);
+        List<DiffRow> rows = drg.generateDiffRows(this.url1Lines, this.url2Lines);
         try
         {
             FileWriter fWriter = new FileWriter(this.outputFolder + this.reportName + ".html");
@@ -146,8 +132,8 @@ public class UrlDiffCompare
     }
 
     private List<Chunk> getChunksByType(Delta.TYPE type) throws IOException {
-        List listOfChanges = new ArrayList();
-        List deltas = getDeltas();
+        List<Chunk> listOfChanges = new ArrayList();
+        List<Delta> deltas = getDeltas();
         for (Delta delta : deltas) {
             if (delta.getType() == type) {
                 listOfChanges.add(delta.getRevised());
@@ -176,7 +162,7 @@ public class UrlDiffCompare
             String inputLine;
             while ((inputLine = in.readLine()) != null)
             {
-                String inputLine;
+
                 urlLines.add(inputLine);
             }
 
@@ -188,7 +174,7 @@ public class UrlDiffCompare
                 ObjectMapper mapper = new ObjectMapper();
                 JsonNode rootNode = (JsonNode)mapper.readValue((String)urlLines.get(0), JsonNode.class);
 
-                ObjectWriter writer = mapper.defaultPrettyPrintingWriter();
+                ObjectWriter writer = mapper.writerWithDefaultPrettyPrinter();
                 String formattedObject = writer.writeValueAsString(rootNode);
 
                 tmpFile.write(formattedObject);
@@ -220,7 +206,7 @@ public class UrlDiffCompare
             String line;
             while ((line = in.readLine()) != null)
             {
-                String line;
+
                 lines.add(line);
             }
         } catch (FileNotFoundException e) {

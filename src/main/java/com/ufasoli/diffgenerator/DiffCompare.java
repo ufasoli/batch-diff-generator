@@ -13,7 +13,7 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.PosixParser;
 
-import com.ufasoli.diffgenerator.diff.implementations.UrlDiffCompare;
+import com.ufasoli.diffgenerator.diff.compare.url.UrlComparattor;
 
 /**
  * Class Name   : DiffCompare
@@ -49,8 +49,8 @@ public class DiffCompare {
 					
 					String leftUrl = applicationproperties.getProperty("left.base.url")+url;
 					String rightUrl = applicationproperties.getProperty("right.base.url")+url; 
-					UrlDiffCompare comparator = new UrlDiffCompare(leftUrl, rightUrl, url.substring(1, url.length()).replace("/", "_").replace("?pretty=true", ""), applicationproperties.getProperty("reports.output.folder"));
-//					UrlDiffCompare comparator = new UrlDiffCompare("http://localhost:8080/tvguide/epg/broadcast/F/L2/1446714_044750-006.json?pretty=true", "http://localhost:8080/tvguide/epg/broadcast/F/L3/1446714_044750-006.json?pretty=true", url.substring(1, url.length()).replace("/", "_").replace("?pretty=true", ""), applicationproperties.getProperty("reports.output.folder"));
+					UrlComparattor comparator = new UrlComparattor(leftUrl, rightUrl, url.substring(1, url.length()).replace("/", "_").replace("?pretty=true", ""), applicationproperties.getProperty("reports.output.folder"));
+//					UrlComparattor comparator = new UrlComparattor("http://localhost:8080/tvguide/epg/broadcast/F/L2/1446714_044750-006.json?pretty=true", "http://localhost:8080/tvguide/epg/broadcast/F/L3/1446714_044750-006.json?pretty=true", url.substring(1, url.length()).replace("/", "_").replace("?pretty=true", ""), applicationproperties.getProperty("reports.output.folder"));
 					comparator.compare();
 				}
 				
@@ -77,7 +77,7 @@ public class DiffCompare {
         String url2 = "http://localhost:8080/tvguide/epg/schedule/F/L2/2013-01-19/2013-01-19.json?pretty=true";
         String url1 = "http://localhost:8080/tvguide/epg/schedule/F/L2/2013-01-18/2013-01-18.json?pretty=true";
        
-//        UrlDiffCompare urlDiffCompare = new UrlDiffCompare(url1, url2);
+//        UrlComparattor urlDiffCompare = new UrlComparattor(url1, url2);
 
     }
 

@@ -1,4 +1,4 @@
-package com.ufasoli.diffgenerator.diff.implementations;
+package com.ufasoli.diffgenerator.diff.compare;
 
 /**
  * Class Name   : Comparator

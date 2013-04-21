@@ -20,7 +20,7 @@ public class FileUtils
             String line;
             while ((line = in.readLine()) != null)
             {
-                String line;
+
                 lines.add(line);
             }
         } catch (FileNotFoundException e) {
@@ -30,7 +30,7 @@ public class FileUtils
                 try {
                     in.close();
                 }
-                catch (IOException e) {
+                catch (IOException e1) {
                     e.printStackTrace();
                 }
         }
@@ -42,7 +42,7 @@ public class FileUtils
                 try {
                     in.close();
                 }
-                catch (IOException e) {
+                catch (IOException e1) {
                     e.printStackTrace();
                 }
         }
