@@ -4,6 +4,7 @@ import com.ufasoli.diffgenerator.diff.reports.Report;
 import difflib.DiffRow;
 
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -16,12 +17,12 @@ import java.util.List;
 public class HtmlReport  implements Report{
 
     @Override
-    public void generateReport(String targetFolder, List<DiffRow> diffs) {
+    public void generateReport(String targetFolder, List<DiffRow> diffs) throws IOException {
 
 
-        if(targetFolder == null )
+        if(targetFolder == null )    {
 
-        FileWriter fWriter = new FileWriter(this.outputFolder + this.reportName + ".html");
+        FileWriter fWriter = new FileWriter(targetFolder+ "reportName" + ".html");
 
         StringBuilder htmlHead = new StringBuilder(
                 "<!DOCTYPE html><html><head><meta charset='utf-8'></head><body><div id='comparaison'><pre style=' white-space: pre-wrap; word-wrap: break-word;'> ");
@@ -33,7 +34,7 @@ public class HtmlReport  implements Report{
         StringBuilder htmlDiffbody = new StringBuilder(
                 "<table style='border-collapse: separate; border-spacing: 2px; border-color: gray;' >");
         htmlDiffbody.append(String.format(
-                "<tr><th>Line</th><th>%s</th><th>Line</th><th>%s</th></tr>", new Object[] { this.url1, this.url2 }));
+                "<tr><th>Line</th><th>%s</th><th>Line</th><th>%s</th></tr>", new Object[] { "this.url1", "this.url2" }));
         htmlDiffbody.append("<tr>");
         int line = 1;
         int changes = 0;
@@ -41,7 +42,7 @@ public class HtmlReport  implements Report{
         int inserted = 0;
         int equal = 0;
 
-        for (DiffRow dr : rows)
+        for (DiffRow dr : diffs)
         {
             htmlDiffbody.append("<tr>");
             String leftCss = "gray";
@@ -93,6 +94,7 @@ public class HtmlReport  implements Report{
         fWriter.write(htmlHead.toString());
         fWriter.write(htmlDiffbody.toString());
         fWriter.close();
+    }
     }
 
     @Override

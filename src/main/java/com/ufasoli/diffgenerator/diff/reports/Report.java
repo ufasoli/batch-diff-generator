@@ -2,6 +2,9 @@ package com.ufasoli.diffgenerator.diff.reports;
 
 import difflib.DiffRow;
 
+import java.io.IOException;
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ufasoli
@@ -11,6 +14,6 @@ import difflib.DiffRow;
  */
 public interface Report {
 
-    public void generateReport(String targetFolder, List<DiffRow> diffs);
+    public void generateReport(String targetFolder, List<DiffRow> diffs) throws IOException;
     public void generateAggregatedReport(String targetFolder, List<DiffRow> diffs, String reportName);
 }

@@ -1,8 +1,8 @@
 package com.ufasoli.diffgenerator;
 
-import com.ufasoli.diffgenerator.diff.compare.url.UrlComparattor;
 import com.ufasoli.diffgenerator.util.FileUtils;
 import org.apache.commons.cli.*;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,6 +22,7 @@ public class DiffGenerator
     {
         Options options = new Options();
         options.addOption("config", true, "Folder where all the configuration files can be found");
+        options.addOption("targets", true, "File containing the url/filenames to append to the base parameter allowing to open the file/url");
         CommandLineParser parser = new PosixParser();
         try {
             CommandLine line = parser.parse(options, args);
@@ -38,9 +39,9 @@ public class DiffGenerator
                 {
                     String leftUrl = applicationproperties.getProperty("left.base.url") + url;
                     String rightUrl = applicationproperties.getProperty("right.base.url") + url;
-                    UrlComparattor comparator = new UrlComparattor(leftUrl, rightUrl, url.substring(1, url.length()).replace("/", "_").replace("?pretty=true", ""), applicationproperties.getProperty("reports.output.folder"));
+              //      UrlComparator comparator = new UrlComparator(leftUrl, rightUrl, url.substring(1, url.length()).replace("/", "_").replace("?pretty=true", ""), applicationproperties.getProperty("reports.output.folder"));
 
-                    comparator.compare();
+                 //   comparator.compare();
                 }
             }
             else

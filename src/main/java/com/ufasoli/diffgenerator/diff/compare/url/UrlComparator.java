@@ -1,18 +1,17 @@
 package com.ufasoli.diffgenerator.diff.compare.url;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
+import com.ufasoli.diffgenerator.diff.compare.Comparator;
+import com.ufasoli.diffgenerator.diff.compare.url.util.UrlUtil;
 import difflib.*;
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UrlComparattor implements Comparator
+public class UrlComparator implements Comparator
 {
+    private final UrlUtil urlUtil = new UrlUtil(this);
     private String url1;
     private String url2;
     private String reportName;
@@ -20,17 +19,18 @@ public class UrlComparattor implements Comparator
     private List<String> url1Lines;
     private List<String> url2Lines;
 
-    public UrlComparattor(String url1, String url2, String reportName, String outputFolder)
+    @Inject
+    public UrlComparator(@Named("reports.output.folder") String outputFolder)
     {
-        this.url1 = url1;
-        this.url2 = url2;
-        this.reportName = reportName;
+
         this.outputFolder = outputFolder;
     }
 
-    public void compare() {
-        this.url1Lines = urlToLines(this.url1);
-        this.url2Lines = urlToLines(this.url2);
+    @Override
+    public List<DiffRow> compare(String left, String right) {
+
+        this.url1Lines = urlUtil.urlToLines(this.url1);
+        this.url2Lines = urlUtil.urlToLines(this.url2);
 
         DiffRowGenerator.Builder builder = new DiffRowGenerator.Builder();
         builder.showInlineDiffs(false);
@@ -151,50 +151,8 @@ public class UrlComparattor implements Comparator
 
     private List<String> urlToLines(String stringUrl)
     {
-        List urlLines = new ArrayList();
-        try
-        {
-            URL url = new URL(stringUrl);
-            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
 
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(connection.getInputStream()));
-            String inputLine;
-            while ((inputLine = in.readLine()) != null)
-            {
-
-                urlLines.add(inputLine);
-            }
-
-            in.close();
-
-            if (urlLines.size() == 1)
-            {
-                FileWriter tmpFile = new FileWriter(this.outputFolder + "tmp.json");
-                ObjectMapper mapper = new ObjectMapper();
-                JsonNode rootNode = (JsonNode)mapper.readValue((String)urlLines.get(0), JsonNode.class);
-
-                ObjectWriter writer = mapper.writerWithDefaultPrettyPrinter();
-                String formattedObject = writer.writeValueAsString(rootNode);
-
-                tmpFile.write(formattedObject);
-
-                tmpFile.close();
-                urlLines.clear();
-                urlLines.addAll(fileToLines(new File(this.outputFolder + "tmp.json")));
-            }
-
-            in.close();
-        }
-        catch (MalformedURLException e)
-        {
-            e.printStackTrace();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return urlLines;
+        return urlUtil.urlToLines(stringUrl);
     }
 
     private List<String> fileToLines(File file)

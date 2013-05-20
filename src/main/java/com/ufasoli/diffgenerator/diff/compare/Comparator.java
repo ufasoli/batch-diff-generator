@@ -1,5 +1,9 @@
 package com.ufasoli.diffgenerator.diff.compare;
 
+import difflib.DiffRow;
+
+import java.util.List;
+
 /**
  * Class Name   : Comparator
  * Description  :
@@ -8,5 +12,5 @@ package com.ufasoli.diffgenerator.diff.compare;
  */
 public interface Comparator {
 
-	
+	          public List<DiffRow> compare(String left, String right);
 }
