@@ -32,6 +32,8 @@ public class UrlUtil {
             while ((inputLine = in.readLine()) != null) {
 
                 urlLines.add(inputLine);
+
+
             }
 
             in.close();
