@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9fde3169-243a-4036-84ad-db03b7db5f29" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/diff-generator.iws" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/diff-generator.ipr" afterPath="$PROJECT_DIR$/batch-diff-generator.ipr" />
     </list>
     <ignored path="diff-generator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -11,7 +10,7 @@
     <file path="/a.dummy" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1359237240795" ignored="false" />
     <file path="/DIffGenerator.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1359239976677" ignored="false" />
     <file path="/DiffGenerator.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366656164997" ignored="false" />
-    <file path="/Dummy.txt" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369071213003" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369071365105" ignored="false" />
     <file path="/UrlDiffCompare.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366556613684" ignored="false" />
     <file path="/FileUtils.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366556646958" ignored="false" />
     <file path="/Bootstrapper.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1367862970568" ignored="false" />
@@ -236,6 +235,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Push.Settings">
+    <option name="myUpdateMethod" value="REBASE" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1052,7 +1054,15 @@
       <created>1369071223747</created>
       <updated>1369071223747</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="some refactoring and renaming the project to a more appropriate one">
+      <created>1369071339335</created>
+      <updated>1369071339335</updated>
+    </task>
+    <task id="LOCAL-00006" summary="some refactoring and renaming the project to a more appropriate one">
+      <created>1369071368250</created>
+      <updated>1369071368250</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
