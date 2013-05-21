@@ -12,11 +12,15 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created with IntelliJ IDEA.
+ * Injection bootstrapper class.
+ * Where all the injection 'magic' takes place.
+ * Define here the different bindings required for the application
+ * to work
+ *
  * User: ufasoli
  * Date: 21/04/13
  * Time: 18:56
- * To change this template use File | Settings | File Templates.
+ *
  */
 public class Bootstrapper extends AbstractModule {
 

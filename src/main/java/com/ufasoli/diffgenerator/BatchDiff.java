@@ -10,12 +10,12 @@ import java.io.File;
 import java.util.List;
 
 /**
- * Class Name   : DiffCompare
+ * Class Name   : BatchDiff
  * Description  :
  * Date         : 17 janv. 2013
  * Auteur       : Ulises Fasoli
  */
-public class DiffCompare {
+public class BatchDiff {
 
     /**
      * @param args
