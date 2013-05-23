@@ -6,11 +6,11 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
+ *
  * User: ufasoli
  * Date: 21/04/13
  * Time: 19:17
- * To change this template use File | Settings | File Templates.
+ *
  */
 public interface Report {
 

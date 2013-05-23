@@ -9,11 +9,11 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
+ *
  * User: ufasoli
  * Date: 22/04/13
  * Time: 21:33
- * To change this template use File | Settings | File Templates.
+ *
  */
 public class ApplicationConfig {
 

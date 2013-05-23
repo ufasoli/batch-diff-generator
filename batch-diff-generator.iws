@@ -3,19 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9fde3169-243a-4036-84ad-db03b7db5f29" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/util/ApplicationConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/util/ApplicationConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/BatchDiff.java" afterPath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/BatchDiff.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-diff-generator.iml" afterPath="$PROJECT_DIR$/batch-diff-generator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-diff-generator.ipr" afterPath="$PROJECT_DIR$/batch-diff-generator.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java" afterPath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java" afterPath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-diff-generator.iws" afterPath="$PROJECT_DIR$/batch-diff-generator.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="diff-generator.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369248414651" ignored="false" />
-    <file path="/a.dummy" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1359237240795" ignored="false" />
+    <file path="/a.dummy" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369329746352" ignored="false" />
     <file path="/DIffGenerator.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1359239976677" ignored="false" />
     <file path="/DiffGenerator.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366656164997" ignored="false" />
-    <file path="/Dummy.txt" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369328286566" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369329584174" ignored="false" />
     <file path="/UrlDiffCompare.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366556613684" ignored="false" />
     <file path="/FileUtils.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366556646958" ignored="false" />
     <file path="/Bootstrapper.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369161571643" ignored="false" />
@@ -141,10 +139,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationConfig.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ApplicationConfig.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/util/ApplicationConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="21" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.02086231">
+            <state line="11" column="2" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Report.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="101" selection-start="216" selection-end="216" vertical-scroll-proportion="0.24657534">
               <folding />
             </state>
           </provider>
@@ -205,7 +212,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/HtmlReport.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/com/ufasoli/diffgenerator/util/ApplicationConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/url/UrlComparattor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/DiffGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/DiffCompare.java" />
@@ -217,6 +223,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/BatchDiff.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/util/ApplicationConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java" />
       </list>
     </option>
   </component>
@@ -303,6 +310,9 @@
             <id>Performance issues</id>
           </State>
           <State>
+            <id>Scala: General</id>
+          </State>
+          <State>
             <id>Spring Model</id>
           </State>
           <State>
@@ -310,6 +320,9 @@
           </State>
           <State>
             <id>Threading issues</id>
+          </State>
+          <State>
+            <id>XPath</id>
           </State>
         </expanded-state>
         <selected-state>
@@ -963,7 +976,11 @@
       <created>1369161772648</created>
       <updated>1369161772648</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added dependency for google guava IO&#10;the urls file is now initialized in the application config class">
+      <created>1369329596230</created>
+      <updated>1369329596230</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -988,11 +1005,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="878" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323219" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3977968" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1001,19 +1019,18 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40237468" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33047736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3328551" sideWeight="0.86206895" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925338" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27111384" sideWeight="0.6763158" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27111384" sideWeight="0.676781" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32368422" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33047736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1059,7 +1076,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed the main class to reflect the project's name" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dependency for google guava IO&#10;the urls file is now initialized in the application config class" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1076,6 +1093,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="some refactoring and renaming the project to a more appropriate one" />
     <MESSAGE value="Renamed the main class to reflect the project's name" />
+    <MESSAGE value="added dependency for google guava IO&#10;the urls file is now initialized in the application config class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1085,11 +1103,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/url/util/UrlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.0/commons-cli-1.0.jar!/org/apache/commons/cli/Parser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="174" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0" />
@@ -1163,16 +1176,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/util/ApplicationConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/url/UrlComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="21" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.02086231">
+        <state line="41" column="28" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/url/UrlComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/util/ApplicationConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="28" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0">
+        <state line="11" column="2" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="101" selection-start="216" selection-end="216" vertical-scroll-proportion="0.24657534">
           <folding />
         </state>
       </provider>
