@@ -3,7 +3,8 @@ package com.ufasoli.diffgenerator.diff.compare.url.util;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.ufasoli.diffgenerator.diff.compare.url.UrlComparator;
+import com.google.inject.Inject;
+import com.ufasoli.diffgenerator.util.ApplicationConfig;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -13,11 +14,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UrlUtil {
-    private final UrlComparator urlComparator;
 
-    public UrlUtil(UrlComparator urlComparator) {
-        this.urlComparator = urlComparator;
+    private ApplicationConfig applicationConfig;
+
+    @Inject
+    public UrlUtil(ApplicationConfig applicationConfig) {
+        this.applicationConfig = applicationConfig;
     }
+
 
     public List<String> urlToLines(String stringUrl) {
 
@@ -40,7 +44,7 @@ public class UrlUtil {
             in.close();
 
             if (urlLines.size() == 1) {
-                FileWriter tmpFile = new FileWriter(urlComparator.getOutputFolder() + "tmp.json");
+                FileWriter tmpFile = new FileWriter(applicationConfig.getReportsFolder() + "tmp.json");
                 ObjectMapper mapper = new ObjectMapper();
                 JsonNode rootNode = (JsonNode) mapper.readValue((String) urlLines.get(0), JsonNode.class);
 
@@ -51,7 +55,7 @@ public class UrlUtil {
 
                 tmpFile.close();
                 urlLines.clear();
-                urlLines.addAll(urlComparator.fileToLines(new File(urlComparator.getOutputFolder() + "tmp.json")));
+                urlLines.addAll(fileToLines(new File(applicationConfig.getReportsFolder() + "tmp.json")));
             }
 
             in.close();
@@ -63,4 +67,27 @@ public class UrlUtil {
 
         return urlLines;
     }
+
+    public List<String> fileToLines(File file)
+    {
+        List lines = new ArrayList();
+        try
+        {
+            BufferedReader in = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = in.readLine()) != null)
+            {
+
+                lines.add(line);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return lines;
+    }
+
 }

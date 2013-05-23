@@ -3,6 +3,7 @@ package com.ufasoli.diffgenerator;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.ufasoli.diffgenerator.diff.compare.Comparator;
+import com.ufasoli.diffgenerator.util.ApplicationConfig;
 import org.apache.commons.cli.*;
 
 /**
@@ -31,9 +32,15 @@ public class BatchDiff {
 
                 Injector injector = Guice.createInjector(new Bootstrapper(config));
 
-                List<String> urls =
+                ApplicationConfig applicationConfig = injector.getInstance(ApplicationConfig.class);
+
+                for(String url : applicationConfig.getTargetFiles()){
+
+                }
 
                 Comparator comparator = injector.getInstance(Comparator.class);
+
+
 
 
 				
@@ -48,12 +55,7 @@ public class BatchDiff {
     	
     	
     	
-    	
-//        String url1 = "http://arte-epg-apipreprod.sdv.fr/tvguide/epg/schedule/F/L2/2013-01-19/2013-01-19.json";
-        String url2 = "http://localhost:8080/tvguide/epg/schedule/F/L2/2013-01-19/2013-01-19.json?pretty=true";
-        String url1 = "http://localhost:8080/tvguide/epg/schedule/F/L2/2013-01-18/2013-01-18.json?pretty=true";
-       
-//        UrlComparator urlDiffCompare = new UrlComparator(url1, url2);
+
 
     }
 

@@ -1,0 +1,64 @@
+body {
+    font-family: monospace;
+}
+
+.wrapper {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+
+/** Left side of the comparaison**/
+
+.deleted-left {
+    border: 1px solid #9A2328;
+    background-color: #FCD8D9;
+}
+
+.inserted-left {
+    border : 1px solid #8E8E8E;
+    background-color: #DEDEDE
+}
+
+.change-left {
+    border: 1px solid #FF6633;
+    background-color: #FF9933
+}
+
+
+
+.equals-left{
+    border: 1px solid #1A981F;
+    background-color: #E0FCD0
+}
+
+/** Right side of the comparaison**/
+
+
+.equals-right{
+    border: 1px solid #1A981F;
+    background-color: #E0FCD0
+}
+
+.deleted-right {
+    border: 1px solid #9A2328;
+    background-color: #FCD8D9;
+}
+
+.inserted-right {
+    border : 1px solid #0033CC;
+    background-color: #CFFEF0
+}
+
+.change-right {
+    border: 1px solid #FF6633;
+    background-color: #FF9933
+}
+
+
+
+.line-number {
+    background-color: #cccccc;
+    font-weight: bold;
+}

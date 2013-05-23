@@ -2,8 +2,12 @@ package com.ufasoli.diffgenerator;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
+import com.ufasoli.diffgenerator.diff.generator.DefaultGenerator;
+import com.ufasoli.diffgenerator.diff.generator.Generator;
 import com.ufasoli.diffgenerator.diff.compare.Comparator;
 import com.ufasoli.diffgenerator.diff.compare.url.UrlComparator;
+import com.ufasoli.diffgenerator.diff.reports.Report;
+import com.ufasoli.diffgenerator.diff.reports.html.HtmlReport;
 import com.ufasoli.diffgenerator.util.ApplicationConfig;
 
 import java.io.File;
@@ -53,7 +57,8 @@ public class Bootstrapper extends AbstractModule {
         bind(ApplicationConfig.class) ;
 
         bind(Comparator.class).to(UrlComparator.class);
-
+        bind(Report.class).to(HtmlReport.class);
+        bind(Generator.class).to(DefaultGenerator.class);
     }
 }
 

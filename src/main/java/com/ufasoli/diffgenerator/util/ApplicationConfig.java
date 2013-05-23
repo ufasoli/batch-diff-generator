@@ -9,21 +9,21 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- *
  * User: ufasoli
  * Date: 22/04/13
  * Time: 21:33
- *
  */
 public class ApplicationConfig {
 
-    public static enum CompareType{URL, FILE};
+    public static enum CompareType {URL, FILE}
+
+    ;
 
     /**
      * Where the report(s) will
      * be created
      */
-   private String reportsFolder;
+    private String reportsFolder;
 
     /**
      * The list of files/url
@@ -33,13 +33,13 @@ public class ApplicationConfig {
 
 
     /**
-     *  The 'Left' base folder or url
+     * The 'Left' base folder or url
      */
     private String baseLeft;
 
 
     /**
-     *  The 'Right' base folder or url
+     * The 'Right' base folder or url
      */
     private String baseRight;
 
@@ -49,37 +49,41 @@ public class ApplicationConfig {
     private CompareType compareType;
 
 
-    private String configFolder ="";
+    private String configFolder = "";
 
 
-    private final String URLS_FILE =   "urls.txt";
+    private final String URLS_FILE = "urls.txt";
 
 
-    public ApplicationConfig( @Named("config.folder") String configFolder , @Named("base.right" )String baseRight, @Named("base.left" ) String baseLeft, @Named("reports.output.folder") String reportsFolder) {
+    public ApplicationConfig(@Named("config.folder") String configFolder, @Named("base.right") String baseRight, @Named("base.left") String baseLeft, @Named("reports.output.folder") String reportsFolder) {
         this.baseLeft = baseLeft;
         this.baseRight = baseRight;
         this.configFolder = configFolder;
         this.reportsFolder = reportsFolder;
     }
 
-    public ApplicationConfig(){
+    public ApplicationConfig() {
 
     }
 
-
+    /**
+     * Loads the list of urls in the urls.txt
+     * files into a list of strings to ease the iteration
+     *
+     * @throws IOException
+     */
     private void loadUrls() throws IOException {
         String urlFilePath = configFolder;
 
-        if(!configFolder.endsWith("/")){
+        if (!configFolder.endsWith("/")) {
             urlFilePath += "/";
         }
-        urlFilePath+= URLS_FILE;
+        urlFilePath += URLS_FILE;
 
         try {
             Files.readLines(new File(urlFilePath), Charsets.UTF_8);
-        }
-        catch (IOException e){
-            throw new IOException(String.format("Unable to bootstrap application as the file [%s] cannot be found. Msg : [%s]", urlFilePath, e.getMessage()))
+        } catch (IOException e) {
+            throw new IOException(String.format("Unable to bootstrap application as the file [%s] cannot be found. Msg : [%s]", urlFilePath, e.getMessage()));
         }
     }
 

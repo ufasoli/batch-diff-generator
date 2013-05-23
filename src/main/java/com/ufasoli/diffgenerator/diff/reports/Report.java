@@ -14,6 +14,6 @@ import java.util.List;
  */
 public interface Report {
 
-    public void generateReport(String targetFolder, List<DiffRow> diffs) throws IOException;
-    public void generateAggregatedReport(String targetFolder, List<DiffRow> diffs, String reportName);
+    public void generateReport(List<DiffRow> diffRows, String reportName, String leftTitle, String rightTitle) throws IOException;
+
 }
