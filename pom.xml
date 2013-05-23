@@ -13,7 +13,7 @@
         <version.java.diff>1.2.1</version.java.diff>
         <version.commons.cli>1.0</version.commons.cli>
         <version.guice>3.0</version.guice>
-
+         <version.guava>14.0.1</version.guava>
     </properties>
 
     <dependencies>
@@ -48,6 +48,10 @@
             <version>${version.guice}</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${version.guava}</version>
+        </dependency>
     </dependencies>
 </project>
