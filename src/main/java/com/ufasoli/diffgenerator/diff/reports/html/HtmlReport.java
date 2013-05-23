@@ -31,17 +31,16 @@ public class HtmlReport implements Report {
 
         try {
             FileWriter fWriter = new FileWriter(outputFolder + reportName + ".html");
-            StringBuilder htmlHead = new StringBuilder(htmlHead());
+            StringBuilder htmlHead = new StringBuilder();
+
+            htmlHead.append(htmlHead());
+            htmlHead.append(htmlLegend());
+
+            StringBuilder htmlDiffbody = new StringBuilder();
+            htmlDiffbody.append(htmlTableHead());
+            htmlDiffbody.append(htmlTableLegend(leftTitle, rightTitle));
 
 
-            htmlHead.append(
-                    String.format();
-
-            StringBuilder htmlDiffbody = new StringBuilder(
-                    "<table style='border-collapse: separate; border-spacing: 2px; border-color: gray;' >");
-            htmlDiffbody.append(String.format(
-                    "<tr><th>Line</th><th>%s</th><th>Line</th><th>%s</th></tr>", new Object[]{leftTitle, rightTitle}));
-            htmlDiffbody.append("<tr>");
             int line = 1;
             int changes = 0;
             int deleted = 0;
@@ -96,13 +95,31 @@ public class HtmlReport implements Report {
         }
     }
 
+
+
     private String htmlHead(){
-        return      "<!DOCTYPE html><html><head><meta charset='utf-8'></head><body><div id='comparaison'><pre class='wrapper'> ";
+        return  "<!DOCTYPE html><html><head><meta charset='utf-8'></head><body><div id='comparaison'><pre class='wrapper'> ";
     }
 
     private String htmlLegend(){
 
-        "<h3>Legend</h3><ul><li>changes : <span style='background-color: %s; border: thin solid black;'>&nbsp;</span></li><li> deleted  : <span style='background-color: %s; border: thin solid black;'>&nbsp;</span></li><li>Equal : <span style='background-color: %s; border: thin solid black;'>&nbsp;</span></li><li>inserted : <span style='background-color: %s; border: thin solid black;'>&nbsp;</span></li></ul>", new Object[]{
-                "#FF9933", "#FCD8D9", "#E0FCD0", "#0099CC"})
+       StringBuilder sb = new StringBuilder("<h3>Legend</h3>");
+        sb.append("<ul>");
+        sb.append("<li>changes : <span class='change-left'>&nbsp;</span></li>");
+        sb.append("<li> deleted  : <span class='deleted-left'>&nbsp;</span></li>");
+        sb.append("<li>Equal : <span class='equals-left'>&nbsp;</span></li>");
+        sb.append("<li>inserted : <span class='inserted-left'>&nbsp;</span></li>");
+        sb.append("</ul>");
+
+        return sb.toString();
+    }
+
+    private String htmlTableHead(){
+        return  "<table class='diff-table'>";
+    }
+
+    private String htmlTableLegend(String leftTitle, String rightTitle) {
+       return String.format(
+                "<tr><th>Line</th><th>%s</th><th>Line</th><th>%s</th></tr>", new Object[]{leftTitle, rightTitle});
     }
 }

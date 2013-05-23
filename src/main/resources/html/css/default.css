@@ -7,8 +7,6 @@ body {
     word-wrap: break-word;
 }
 
-
-
 /** Left side of the comparaison**/
 
 .deleted-left {
@@ -17,7 +15,7 @@ body {
 }
 
 .inserted-left {
-    border : 1px solid #8E8E8E;
+    border: 1px solid #8E8E8E;
     background-color: #DEDEDE
 }
 
@@ -26,17 +24,14 @@ body {
     background-color: #FF9933
 }
 
-
-
-.equals-left{
+.equals-left {
     border: 1px solid #1A981F;
     background-color: #E0FCD0
 }
 
 /** Right side of the comparaison**/
 
-
-.equals-right{
+.equals-right {
     border: 1px solid #1A981F;
     background-color: #E0FCD0
 }
@@ -47,7 +42,7 @@ body {
 }
 
 .inserted-right {
-    border : 1px solid #0033CC;
+    border: 1px solid #0033CC;
     background-color: #CFFEF0
 }
 
@@ -56,9 +51,14 @@ body {
     background-color: #FF9933
 }
 
-
-
 .line-number {
     background-color: #cccccc;
     font-weight: bold;
+}
+
+.diff-table {
+
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
 }
