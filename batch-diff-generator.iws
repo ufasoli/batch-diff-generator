@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fde3169-243a-4036-84ad-db03b7db5f29" name="Default" comment="">
+    <list default="true" id="9fde3169-243a-4036-84ad-db03b7db5f29" name="Default" comment="private">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/util/DiffCounter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java" afterPath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java" afterPath="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-diff-generator.iws" afterPath="$PROJECT_DIR$/batch-diff-generator.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/html/css/default.css" afterPath="$PROJECT_DIR$/src/main/resources/html/css/default.css" />
     </list>
     <ignored path="diff-generator.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369248414651" ignored="false" />
-    <file path="/a.dummy" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369329746352" ignored="false" />
+    <file path="/a.dummy" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369501815245" ignored="false" />
     <file path="/DIffGenerator.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1359239976677" ignored="false" />
     <file path="/DiffGenerator.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366656164997" ignored="false" />
-    <file path="/Dummy.txt" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369340440054" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369502993991" ignored="false" />
     <file path="/UrlDiffCompare.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366556613684" ignored="false" />
     <file path="/FileUtils.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366556646958" ignored="false" />
     <file path="/Bootstrapper.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369337794155" ignored="false" />
     <file path="/fragment.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1368552637454" ignored="false" />
     <file path="/UrlComparattor.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1366563603094" ignored="false" />
-    <file path="/Report.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369338542403" ignored="false" />
-    <file path="/HtmlReport.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369340373204" ignored="false" />
+    <file path="/Report.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369504678415" ignored="false" />
+    <file path="/HtmlReport.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369504255789" ignored="false" />
     <file path="/ApplicationConfig.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369336744819" ignored="false" />
     <file path="/UrlComparator.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369336890056" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/WebServices.jar!/schemas/wsdl/wsdl.xsd" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1367002321770" ignored="false" />
@@ -42,6 +43,7 @@
     <file path="/DiffWrapper.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369338071951" ignored="false" />
     <file path="/UrlUtil.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369338313978" ignored="false" />
     <file path="/default.css" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369340276370" ignored="false" />
+    <file path="/DiffCounter.java" changelist="9fde3169-243a-4036-84ad-db03b7db5f29" time="1369501414558" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -125,6 +126,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -147,20 +149,28 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/generator/DefaultGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="37" column="66" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HtmlReport.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="39" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;method#htmlTr#0;class#HtmlReport#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HtmlReport.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java">
+      <file leaf-file-name="Report.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="9" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.14822134">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="28" column="24" selection-start="803" selection-end="803" vertical-scroll-proportion="0.4152824">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,7 +244,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/DiffCompare.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/Comparator.java" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -246,10 +255,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/util/DiffWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/url/util/UrlUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/url/UrlComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java" />
         <option value="$PROJECT_DIR$/src/main/resources/css/default.css" />
         <option value="$PROJECT_DIR$/src/main/resources/html/css/default.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/util/DiffCounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java" />
       </list>
     </option>
   </component>
@@ -300,9 +310,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="937" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -387,6 +396,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -671,89 +681,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-diff-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-diff-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diffgenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="url" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-diff-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-diff-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diffgenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="url" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -766,14 +695,14 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/batch-diff-generator.ipr" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
@@ -1162,7 +1091,11 @@
       <created>1369339797525</created>
       <updated>1369339797525</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="more css and HtmlReport modifications&#10;">
+      <created>1369340458565</created>
+      <updated>1369340458565</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1186,13 +1119,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="937" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323219" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3977968" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1201,7 +1133,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40237468" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33047736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -1213,6 +1144,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323219" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33047736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1288,11 +1221,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/3.0/guice-3.0-sources.jar!/com/google/inject/AbstractModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="17" selection-start="5292" selection-end="5292" vertical-scroll-proportion="0.33286318" />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/3.0/guice-3.0-sources.jar!/com/google/inject/spi/Elements.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="231" column="0" selection-start="8261" selection-end="8261" vertical-scroll-proportion="3.7090163" />
@@ -1300,16 +1228,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="36" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.897541">
-          <folding />
-        </state>
+        <state line="53" column="36" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.897541" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="46" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="46" selection-end="60" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/util/ApplicationConfig.java">
@@ -1321,9 +1245,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/generator/Generator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="0.2154047">
-          <folding />
-        </state>
+        <state line="11" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="0.2154047" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/BatchDiff.java">
@@ -1342,34 +1264,12 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/java-diff-utils/diffutils/1.2.1/diffutils-1.2.1-sources.jar!/difflib/Delta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.4699739">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/generator/DefaultGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="66" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="38" column="16" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.4699739" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/util/DiffWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="21" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.9399478">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="48" column="21" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.9399478" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/url/util/UrlUtil.java">
@@ -1393,12 +1293,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/compare/util/DiffCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="16" selection-start="332" selection-end="332" vertical-scroll-proportion="0.29900333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/generator/DefaultGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="66" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/html/HtmlReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="9" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.14822134">
+        <state line="17" column="39" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#htmlTr#0;class#HtmlReport#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ufasoli/diffgenerator/diff/reports/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="24" selection-start="803" selection-end="803" vertical-scroll-proportion="0.4152824">
+          <folding />
         </state>
       </provider>
     </entry>
